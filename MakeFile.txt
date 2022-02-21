@@ -1,0 +1,31 @@
+make depend' uses makedepend to automatically generate dependencies 
+#               (dependencies are added to end of Makefile)
+# 'make'        build executable file 'mycc'
+# 'make clean'  removes all .o and executable files
+#
+
+# define the C compiler to use
+CC = gcc
+
+#Run a file
+
+CC = gcc
+HW2: hw2.o gcc
+	gcc hw2.c -o hw2
+
+#OBJ= homework2.o
+#LINKOBH= homework2.o
+
+
+homework2.o: homework2.c
+	$(CC) -c homework2.c -o homework2.o $(CFLAGS)
+
+#working file
+scp C:\Users\sayle\OneDrive\Desktop\SP\hw2.c saylee30@moat.cs.uab.edu:~/CS332/lab
+
+Homework: homework2.o gcc
+	gcc homework2.c -o homework2
+
+
+
+
